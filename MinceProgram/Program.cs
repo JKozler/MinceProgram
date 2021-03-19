@@ -16,7 +16,7 @@ namespace MinceProgram
         private static int jedna = 0;
         static void Main(string[] args)
         {
-            KolikVratit(237, false, false, false, false, false, false);
+            KolikVratit(239, false, false, false, false, false);
             Console.WriteLine("50 - " + padesat+ "x");
             Console.WriteLine("20 - " + dvacet + "x");
             Console.WriteLine("10 - " + deset + "x");
@@ -26,14 +26,14 @@ namespace MinceProgram
             Console.ReadKey();
         }
 
-        public static void KolikVratit(int castka, bool pad, bool dvace, bool des, bool pet, bool dva, bool jed) {
+        public static void KolikVratit(int castka, bool pad, bool dvace, bool des, bool pet, bool dva) {
             if (!pad)
             {
                 int x = castka % 50;
                 if (x != 0)
                 {
                     padesat = (castka - x) / 50;
-                    KolikVratit(x, true, false, false, false, false, false);
+                    KolikVratit(x, true, false, false, false, false);
                 }
                 else
                     padesat = (castka - x) / 50;
@@ -44,7 +44,7 @@ namespace MinceProgram
                 if (x != 0)
                 {
                     dvacet = (castka - x) / 20;
-                    KolikVratit(x, true, true, false, false, false, false);
+                    KolikVratit(x, true, true, false, false, false);
                 }
                 else
                     dvacet = (castka - x) / 50;
@@ -55,7 +55,7 @@ namespace MinceProgram
                 if (x != 0)
                 {
                     deset = (castka - x) / 10;
-                    KolikVratit(x, true, true, true, false, false, false);
+                    KolikVratit(x, true, true, true, false, false);
                 }
                 else
                     deset = (castka - x) / 10;
@@ -66,7 +66,7 @@ namespace MinceProgram
                 if (x != 0)
                 {
                     petc = (castka - x) / 5;
-                    KolikVratit(x, true, true, true, true, false, false);
+                    KolikVratit(x, true, true, true, true, false);
                 }
                 else
                     petc = (castka - x) / 5;
@@ -77,7 +77,7 @@ namespace MinceProgram
                 if (x != 0)
                 {
                     dvac = (castka - x) / 2;
-                    KolikVratit(x, true, true, true, true, true, false);
+                    KolikVratit(x, true, true, true, true, true);
                 }
                 else
                     dvac = (castka - x) / 2;
