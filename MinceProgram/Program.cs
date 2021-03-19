@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MinceProgram
 {
-    class Program
+    public class Program
     {
-        private static int padesat = 0;
-        private static int dvacet = 0;
-        private static int deset = 0;
-        private static int petc = 0;
-        private static int dvac = 0;
-        private static int jedna = 0;
+        public static int padesat = 0;
+        public static int dvacet = 0;
+        public static int deset = 0;
+        public static int petc = 0;
+        public static int dvac = 0;
+        public static int jedna = 0;
         static void Main(string[] args)
         {
             KolikVratit(239, false, false, false, false, false);
