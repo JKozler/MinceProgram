@@ -83,9 +83,7 @@ namespace MinceProgram
                     dvac = (castka - x) / 2;
             }
             else
-            {
                 jedna = castka;
-            }
         }
     }
 }
