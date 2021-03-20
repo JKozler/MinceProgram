@@ -16,13 +16,33 @@ namespace MinceProgram
         public static int jedna = 0;
         static void Main(string[] args)
         {
-            KolikVratit(239, false, false, false, false, false);
-            Console.WriteLine("50 - " + padesat+ "x");
-            Console.WriteLine("20 - " + dvacet + "x");
-            Console.WriteLine("10 - " + deset + "x");
-            Console.WriteLine("5 - " + petc + "x");
-            Console.WriteLine("2 - " + dvac + "x");
-            Console.WriteLine("1 - " + jedna + "x");
+            Console.Write("Jaká je cena: ");
+            string s = Console.ReadLine();
+            Console.WriteLine();
+            Console.Write("Kolik zaplatil: ");
+            string a = Console.ReadLine();
+            if (Convert.ToInt32(a) - Convert.ToInt32(s) == Math.Abs(Convert.ToInt32(a) - Convert.ToInt32(s)))
+            {
+                try
+                {
+                    KolikVratit(Convert.ToInt32(a) - Convert.ToInt32(s), false, false, false, false, false);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                Console.WriteLine("Vráceno:");
+                Console.WriteLine("50 - " + padesat + "x");
+                Console.WriteLine("20 - " + dvacet + "x");
+                Console.WriteLine("10 - " + deset + "x");
+                Console.WriteLine("5 - " + petc + "x");
+                Console.WriteLine("2 - " + dvac + "x");
+                Console.WriteLine("1 - " + jedna + "x");
+            }
+            else
+            {
+                Console.WriteLine("Nejde vrátit, zaplaceno málo.");
+            }
             Console.ReadKey();
         }
 
